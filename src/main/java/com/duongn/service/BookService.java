@@ -61,6 +61,10 @@ public class BookService {
         return bookRepository.findById(id);
     }
 
+    public List<Book> getAll() {
+        return bookRepository.findAll();
+    }
+
     public List<Book> searchByTitle(String title) {
         List<Book> result = new ArrayList<>();
         for (Book b : bookRepository.findAll()) {
